@@ -7,6 +7,8 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 
+import static Util.Utils.writeToAFile;
+
 public class Main {
 
 
@@ -129,11 +131,5 @@ public class Main {
         }
     }
 
-    private static void writeToAFile(String outputFile, String payload){
-        try (BufferedWriter bw = new BufferedWriter(new FileWriter(outputFile))) {
-            bw.write(payload);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-    }
+
 }
