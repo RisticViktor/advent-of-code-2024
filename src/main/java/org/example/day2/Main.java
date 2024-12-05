@@ -5,7 +5,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.*;
 
-import static Util.Utils.writeToAFile;
+import static util.Utils.writeToAFile;
 
 public class Main {
 

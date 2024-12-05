@@ -7,7 +7,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 
-import static Util.Utils.writeToAFile;
+import static util.Utils.writeToAFile;
 
 public class Main {
 
