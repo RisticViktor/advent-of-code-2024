@@ -14,6 +14,7 @@ public class Main {
 
 
     public static void main(String[] args) {
+        System.out.println("\nPROCESS STARTS\n");
 
         String inputFile = "inputs/day-1/input.txt";
 
@@ -24,7 +25,7 @@ public class Main {
 //        PART 2 solutions
         hashMapSolutionPart2(inputFile, "outputs/day-1/part-2/output-hash-map.txt");
 
-        System.out.println("PROCESS FINISHED");
+        System.out.println("\nPROCESS FINISHED");
     }
 
     private static void hashMapSolutionPart2(String inputFile, String outputfile) {
@@ -50,6 +51,8 @@ public class Main {
             writeToAFile(outputfile, String.valueOf(totalSum));
         } catch (IOException e) {
             throw new RuntimeException(e);
+        } finally {
+            System.out.println("HASH MAP PART 2 - PROCESS FINISHED");
         }
     }
 
@@ -74,6 +77,8 @@ public class Main {
            writeToAFile(outputFile, String.valueOf(sum));
        } catch (IOException e) {
            writeToAFile(outputFile, e.getMessage());
+       } finally {
+           System.out.println("MIN HEAP PART 1 - PROCESS FINISHED");
        }
     }
 
@@ -128,8 +133,8 @@ public class Main {
             writeToAFile(outputFile, e.getMessage());
         } catch (ExecutionException | InterruptedException e) {
             throw new RuntimeException(e);
+        } finally {
+            System.out.println("DIVIDE AND CONQUER PART 1 - PROCESS FINISHED");
         }
     }
-
-
 }

@@ -10,6 +10,8 @@ import static util.Utils.writeToAFile;
 public class Main {
 
     public static void main(String[] args) {
+        System.out.println("\nPROCESS STARTS\n");
+
         String inputFile = "inputs/day-2/input.txt";
 
 //        PART 1 solutions
@@ -19,7 +21,7 @@ public class Main {
 //        PART 2 solutions
         modifiedIterativeSolutionPart2(inputFile, "outputs/day-2/part-2/output-iterative-modified.txt");
 
-        System.out.println("PROCESS FINISHED");
+        System.out.println("\nPROCESS FINISHED");
     }
 
 
@@ -40,6 +42,9 @@ public class Main {
             writeToAFile(outputFile, String.valueOf(totalValidReports));
         } catch (IOException e) {
             throw new RuntimeException(e);
+        }
+        finally {
+            System.out.println("MODIFIED ITERATIVE PART 2 - PROCESS FINISHED");
         }
     }
 
@@ -69,6 +74,8 @@ public class Main {
             writeToAFile(outputFile, String.valueOf(totalValidReports));
         } catch (IOException e) {
             throw new RuntimeException(e);
+        } finally {
+            System.out.println("STACK PART 1 - PROCESS FINISHED");
         }
     }
 
@@ -108,6 +115,8 @@ public class Main {
             writeToAFile(outputFile, String.valueOf(totalValidReports));
         } catch (IOException e) {
             throw new RuntimeException(e);
+        } finally {
+            System.out.println("ITERATIVE PART 1 - PROCESS FINISHED");
         }
     }
 
